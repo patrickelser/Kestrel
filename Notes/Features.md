@@ -15,6 +15,12 @@
 + Calendars Pane (Tall)
 + Upcoming Pane (Tall)
 
++ Needed iCalendar components
+	* vtimezone
+	* vevent
+	+ vcalendar
+	+ vtodo
+		* 
 
 
 ## Desired Features
