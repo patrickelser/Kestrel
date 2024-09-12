@@ -9,15 +9,23 @@ find_package(Qt6 6.5 REQUIRED COMPONENTS Quick)
 qt_standard_project_setup(REQUIRES 6.5)
 
 qt_add_executable(appKestrel
-    main.cpp
+    src/main.cpp
 )
 
 qt_add_qml_module(appKestrel
     URI Kestrel
     VERSION 1.0
     QML_FILES
-        Main.qml
-        SOURCES main.h
+        QML/Main.qml
+        QML/month/Month.qml
+        QML/title/Title.qml
+        SOURCES include/main.h
+        SOURCES src/main.cpp
+        QML_FILES QML/title/Settings.qml
+        QML_FILES
+        QML_FILES QML/calendars/Calendars.qml
+        QML_FILES QML/util/HSpacer.qml
+        QML_FILES QML/util/VSpacer.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
